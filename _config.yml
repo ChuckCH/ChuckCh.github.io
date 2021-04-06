@@ -2,3 +2,16 @@ theme: jekyll-theme-architect
 
 title: The title of your site
 description: A short description of your site's purpose
+
+# Setup
+name:         Project or Site name (Architect Theme)
+tagline:      A responsive theme for your project on GitHub Pages
+baseurl:      ""
+locale:       "en"
+
+# Gems
+gems:
+  - jekyll-paginate
+
+#Others
+markdown: kramdown
