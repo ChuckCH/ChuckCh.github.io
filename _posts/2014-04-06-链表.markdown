@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "链表"
-date:   
 categories: jekyll update
 ---
 
