@@ -4,7 +4,23 @@ title:  "Redis深度历险:核心原理和应用实践"
 categories: jekyll update
 ---
 
-[天下无难试](https://zhuanlan.zhihu.com/p/32540678)
-
 <a href="https://zhuanlan.zhihu.com/p/32540678" target="_blank">天下无难试</a>
+
+5种数据结构 string、list、set、hash、zset
+
+**string** 类似ArrayList，预分配内存，小于1M扩容加倍，一次扩容最多1M，字符串最大长度512M
+
+**list** 类似LinkedList，插入删除O(1)，索引定位O(n)，常做异步队列，将任务塞进list，另一线程轮询
+
+**慢操作** lindex 性能随index变大而增差 ltrim同理，
+
+redis底层用的quicklist，元素较少时 ziplist，连续内存，元素较多时，用quicklist将多个ziplist用双向指针串起来。
+
+**hash** 类似HashMap 数组+链表 为了性能采用渐进式rehash 
+
+**set** 类似HashSet
+
+**zset** 类似SortedSet+HashMap 跳跃列表 层级制，每隔几个元素挑出代表，随即策略决定新元素可以到达第几层
+
+![image-20211108170025853](D:\Users\hangchen\AppData\Roaming\Typora\typora-user-images\image-20211108170025853.png)
 
