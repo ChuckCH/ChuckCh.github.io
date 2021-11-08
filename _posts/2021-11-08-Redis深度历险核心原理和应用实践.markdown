@@ -4,5 +4,5 @@ title:  "Redis深度历险:核心原理和应用实践"
 categories: jekyll update
 ---
 
-[天下无难试](https://zhuanlan.zhihu.com/p/32540678)
+[天下无难试](https://zhuanlan.zhihu.com/p/32540678{:target="_blank"})
 
