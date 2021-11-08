@@ -28,11 +28,6 @@ redis底层用的quicklist，元素较少时 ziplist，连续内存，元素较�
 
 分布式锁 一般适用setnx（set if not exusts）用完了再del  如果执行出现异常，可能会导致无法调用del 进而死锁，所以一般需加上过期时间。但setnx 和expire不是原子操作，还是会出现问题。Redis 2.8 修复了这一问题，set lock true ex 5 nx
 
-> - EX seconds − 设置指定的到期时间(以秒为单位)。
-> - PX milliseconds - 设置指定的到期时间(以毫秒为单位)。
-> - NX - 仅在键不存在时设置键。
-> - XX - 只有在键已存在时才设置。
-
 <blockquote style="font-size:15px" >
   <ul>
     <li>EX seconds − 设置指定的到期时间(以秒为单位)。</li>
@@ -45,4 +40,13 @@ redis底层用的quicklist，元素较少时 ziplist，连续内存，元素较�
 如果任务时间大于锁过期时间，那么第一个任务的释放锁操作释放了第二个任务的锁，第三个任务会提前拿到锁。会导致超时问题。
 
 **可重入性**  如果一个锁支持同一线程多次加速，那么就是可重入的， Redis如果需要支持可重入 ，需对set进行包装，使用线程ThreadLocal变量存储当前锁的计数。
+
+延时队列 对可靠性要求不高时可用。rpush+lpop or lpush+rpop 
+blpop/brpop blocking 阻塞读解决队列延迟 无数据休眠，有数据则读。但可能有空闲链接问题，客户端注意捕获异常。
+
+**锁冲突** 
+
+1. 直接抛出异常
+2. sleep
+3. 请求转移至延时队列
 
