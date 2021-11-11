@@ -50,3 +50,12 @@ blpop/brpop blocking 阻塞读解决队列延迟 无数据休眠，有数据则�
 2. sleep
 3. 请求转移至延时队列
 
+**位图** getbit/setbit 类似于字符串或byte数组 支持按位存按位取，即零存整取，零存零取，整存零取。bitpos查第一个0/1，bitcount查数量。可指定[start，end]。但参数是字节索引，即必须为8的倍数。
+
+**HyperLogLog** pfadd 和 pfcount 内存占用12k
+
+**布隆过滤器** 
+
+**简单限流** zset按时间戳存。取一段时间的总数量进行比较。
+
+**漏斗限流** 
