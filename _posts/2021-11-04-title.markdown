@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "209"
+title:  "title"
 difficulty: medium   
 categories: jekyll update
 permalink: date
