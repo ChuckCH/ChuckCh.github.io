@@ -4,7 +4,7 @@ title:  "链表"
 categories: jekyll update
 ---
 
-Check out the [Jekyll docs][111] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][sss].
+Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
 
 [jekyll-gh]: https://chuckch.github.io/article209
 [jekyll]:    http://jekyllrb.com
