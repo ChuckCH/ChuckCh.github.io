@@ -3,7 +3,7 @@ layout: post
 title:  "209"
 difficulty: medium   
 categories: jekyll update
-permalink: date
+permalink: /article209
 ---
 
 
