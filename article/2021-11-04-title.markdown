@@ -3,12 +3,12 @@ layout: post
 title:  "209"
 difficulty: medium   
 categories: jekyll update
-permalink: date
+permalink: /article209
 ---
 
 
 
-1
+
 
 [209. 长度最小的子数组](https://leetcode-cn.com/problems/minimum-size-subarray-sum/)
 
