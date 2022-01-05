@@ -2,7 +2,6 @@
 layout: post
 title:  "title"
 difficulty: medium   
-categories: jekyll update
 permalink: date
 ---
 
