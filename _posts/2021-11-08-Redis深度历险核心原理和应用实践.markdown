@@ -124,4 +124,14 @@ blpop/brpop blocking 阻塞读解决队列延迟 无数据休眠，有数据则�
 
 ### 快照
 
-​	COW Copy On Write
+​	多进程 COW Copy On Write 写入是写入复制的页面，存储是快照的页面。
+
+​	glibc的fork函数	
+
+### AOF 原理
+
+​	AOF日志记录内存修改的指令，指令先校验，然后存储到AOF 即先存到磁盘，再执行。可以重放恢复redis状态
+
+​	AOF重写  bgrewriteaof background rewrite aof  用子进程 遍历内存形成新的AOF
+
+​	fsync 
