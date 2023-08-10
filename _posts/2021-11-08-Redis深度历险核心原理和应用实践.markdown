@@ -134,4 +134,15 @@ blpop/brpop blocking 阻塞读解决队列延迟 无数据休眠，有数据则�
 
 ​	AOF重写  bgrewriteaof background rewrite aof  用子进程 遍历内存形成新的AOF
 
-​	fsync 
+​	fsync  将指定文件内容强制从内核缓存刷到磁盘， 慢！！！ 1s一次
+
+### Redis 4.0 混合持久化
+
+​	AOF相对rdb效率慢 Redis4.0 rdb+增量AOF
+
+**管道**
+
+
+
+
+
